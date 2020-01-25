@@ -29,5 +29,5 @@ $(document).ready(function() {
 //CSS PRELOADER
 function showPreLoader() {
   $(".wrapper__loader").css("display", "none");
-  $("body").css({ height: "auto", "overflow-y": "scroll" });
+  $("body").css({ height: "auto", overflowY: "scroll" });
 }
