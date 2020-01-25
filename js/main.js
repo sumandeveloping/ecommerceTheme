@@ -3,6 +3,7 @@ $(document).ready(function() {
     $("body").addClass("body--responsive");
     if ($(this).is(":checked")) {
       $(".hamburger span").css("background-color", "#fff");
+      $(".menu2--wrapper").css("display", "block");
       $(".menu--2").addClass("show_menu--2");
       $("body").addClass("body--responsive");
       $(".overlay").fadeIn(500);
@@ -11,6 +12,7 @@ $(document).ready(function() {
     } else {
       $(".hamburger label span").css("background-color", "#2b2a2a");
       $(".menu--2").removeClass("show_menu--2");
+      $(".menu2--wrapper").css("display", "none");
       $("body").removeClass("body--responsive");
       $(".overlay").fadeOut(200);
     }

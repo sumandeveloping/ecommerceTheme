@@ -361,6 +361,7 @@ body {
   background-color: transparent;
   z-index: 997;
   overflow: hidden;
+  display: none;
 }
 
 /* Menu section */
@@ -400,11 +401,64 @@ body {
   color: #e84342 !important;
 }
 
+.hamburger {
+  display: block;
+  float: right;
+  visibility: hidden;
+  top: 4rem;
+  right: 5rem;
+}
+
+.hamburger label {
+  cursor: pointer;
+}
+
+.hamburger label:hover span:first-child {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.hamburger label:hover span:last-child {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.hamburger #hamburger_btn {
+  visibility: hidden;
+}
+
+.hamburger #hamburger_btn:checked + label span:first-child {
+  -webkit-transform: rotate(135deg) translate(7px, -8px);
+          transform: rotate(135deg) translate(7px, -8px);
+}
+
+.hamburger #hamburger_btn:checked + label span:nth-child(2) {
+  display: none;
+}
+
+.hamburger #hamburger_btn:checked + label span:last-child {
+  -webkit-transform: rotate(-135deg) translate(-4px, -2px);
+          transform: rotate(-135deg) translate(-4px, -2px);
+}
+
+.hamburger span {
+  display: block;
+  position: relative;
+  margin-bottom: 4px;
+  width: 2.5rem;
+  height: 3px;
+  background-color: #2b2a2a;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
 /* Header section */
 .header {
   position: relative;
   overflow-x: hidden;
   width: 100%;
+  z-index: 500;
 }
 
 .header--top {
@@ -487,56 +541,6 @@ body {
 
 .header--menu nav.menu--bar ul li .menu__item:hover::after {
   width: 100%;
-}
-
-.header--menu .hamburger {
-  display: block;
-  float: right;
-  visibility: hidden;
-}
-
-.header--menu .hamburger label {
-  cursor: pointer;
-}
-
-.header--menu .hamburger label:hover span:first-child {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-}
-
-.header--menu .hamburger label:hover span:last-child {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-}
-
-.header--menu .hamburger #hamburger_btn {
-  visibility: hidden;
-}
-
-.header--menu .hamburger #hamburger_btn:checked + label span:first-child {
-  -webkit-transform: rotate(135deg) translate(7px, -8px);
-          transform: rotate(135deg) translate(7px, -8px);
-}
-
-.header--menu .hamburger #hamburger_btn:checked + label span:nth-child(2) {
-  display: none;
-}
-
-.header--menu .hamburger #hamburger_btn:checked + label span:last-child {
-  -webkit-transform: rotate(-135deg) translate(-4px, -2px);
-          transform: rotate(-135deg) translate(-4px, -2px);
-}
-
-.header--menu .hamburger span {
-  display: block;
-  position: relative;
-  margin-bottom: 4px;
-  width: 2.5rem;
-  height: 3px;
-  background-color: #2b2a2a;
-  cursor: pointer;
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
 }
 
 .slider {
@@ -1896,18 +1900,20 @@ body {
   body {
     overflow-x: hidden !important;
   }
+  .menu2--wrapper {
+    z-index: 999 !important;
+  }
   .header--menu nav.menu--bar {
     display: none !important;
   }
-  .header--menu .hamburger {
+  .hamburger {
     display: block;
     visibility: visible;
     position: absolute;
-    top: 38%;
-    right: 7%;
-    z-index: 1001;
+    right: 5rem;
+    z-index: 9999999 !important;
   }
-  .header--menu .hamburger i {
+  .hamburger i {
     font-size: 2rem;
     cursor: pointer;
     color: #000;
@@ -1956,19 +1962,6 @@ body {
   }
   .header--menu nav.menu--bar ul li .menu__item:hover li {
     background-color: coral;
-  }
-  .header--menu .hamburger {
-    display: block;
-    visibility: visible;
-    position: absolute;
-    top: 38%;
-    right: 7%;
-    z-index: 1001;
-  }
-  .header--menu .hamburger i {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #000;
   }
   .newsletter .email_subscribe h2 {
     font-size: 1.8rem !important;
