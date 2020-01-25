@@ -54,9 +54,9 @@ html {
 
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 /* ========================= */
@@ -352,13 +352,24 @@ body {
   z-index: 888;
 }
 
+.menu2--wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 27rem;
+  background-color: transparent;
+  z-index: 997;
+  overflow: hidden;
+}
+
 /* Menu section */
 .menu--2 {
   position: absolute;
-  width: 27rem;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: #1b1b1b;
-  z-index: 1000;
+  z-index: 999;
   right: -100%;
   -webkit-transition: all 0.4s cubic-bezier(0.51, -0.33, 0.38, 0.97);
   transition: all 0.4s cubic-bezier(0.51, -0.33, 0.38, 0.97);
@@ -390,6 +401,12 @@ body {
 }
 
 /* Header section */
+.header {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .header--top {
   width: 100%;
   height: 5rem;
@@ -1876,6 +1893,9 @@ body {
 }
 
 @media only screen and (max-width: 1270px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .header--menu nav.menu--bar {
     display: none !important;
   }
@@ -1981,6 +2001,9 @@ body {
   }
   .mainProduct--product__img--cart span i {
     font-size: 1.5rem !important;
+  }
+  .parallax {
+    background-attachment: scroll !important;
   }
   .parallax .limitedOffer--sale .sale--heading {
     font-size: 1.2rem;

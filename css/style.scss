@@ -27,13 +27,14 @@ span::selection {
 html {
   font-size: 62.5%; //1rem = 10px
   height: 100%;
+  // overflow-x: hidden;
 }
 
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 /* ========================= */
@@ -256,13 +257,24 @@ body {
   z-index: 888;
 }
 
+.menu2--wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 27rem;
+  background-color: transparent;
+  z-index: 997;
+  overflow: hidden;
+}
+
 /* Menu section */
 .menu--2 {
   position: absolute;
-  width: 27rem;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgb(27, 27, 27);
-  z-index: 1000;
+  z-index: 999;
   right: -100%;
   transition: all 0.4s cubic-bezier(0.51, -0.33, 0.38, 0.97);
 
@@ -292,6 +304,9 @@ body {
 
 /* Header section */
 .header {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
   &--top {
     width: 100%;
     height: 5rem;
@@ -1673,6 +1688,9 @@ body {
 //=======================          MEDIA QUERIES               ============================
 
 @media only screen and (max-width: 1270px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .header--menu {
     nav.menu--bar {
       display: none !important;
@@ -1804,6 +1822,7 @@ body {
 
   //parallax
   .parallax {
+    background-attachment: scroll !important;
     .limitedOffer--sale {
       .sale--heading {
         font-size: 1.2rem;
