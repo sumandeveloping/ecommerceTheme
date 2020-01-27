@@ -309,6 +309,7 @@ body {
   visibility: hidden;
   top: 4rem;
   right: 5rem;
+  position: absolute;
 
   label {
     cursor: pointer;
@@ -2206,6 +2207,127 @@ body {
           padding: 0.5rem 1rem;
           font-size: 1.5rem;
         }
+      }
+    }
+  }
+}
+
+//FOR MOBILE DEVICES
+@media only screen and (max-width: 575px) {
+  //index page
+  .slider {
+    height: 40vh !important;
+    margin-top: 1rem;
+    .carousel-inner {
+      .carousel-item img {
+        height: 40vh !important;
+      }
+    }
+  }
+  .ProductOffer {
+    padding-top: 10rem;
+    .top_offer {
+      margin-bottom: 3rem !important;
+      img {
+        height: 30rem !important;
+      }
+    }
+  }
+  .newArrival {
+    &__text {
+      &--heading {
+        &::before {
+          width: 2rem;
+          left: 8rem;
+          opacity: 0;
+        }
+        &::after {
+          width: 2rem;
+          right: 7rem;
+          opacity: 0;
+        }
+      }
+      &--para {
+        word-break: break-word;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .parallax {
+    .limitedOffer {
+      &__heading {
+        h3 {
+          font-size: 1.3rem !important;
+        }
+        p {
+          font-size: 1.1rem !important;
+        }
+      }
+    }
+  }
+  .mainProduct {
+    &__text {
+      &--heading {
+        &::before {
+          width: 2rem;
+          left: 7rem;
+          display: none;
+        }
+        &::after {
+          width: 2rem;
+          right: 7rem;
+          display: none;
+        }
+      }
+      &--para {
+        font-size: 1.1rem !important;
+        word-break: break-word;
+      }
+    }
+  }
+  .newsletter {
+    .email_subscribe {
+      flex-direction: column;
+      h2 {
+        font-size: 1.2rem !important;
+      }
+
+      .form--newsletter {
+        width: 80% !important;
+        input[type="email"] {
+          width: 80% !important;
+          font-size: 1.2rem;
+        }
+        .subscribe--btn {
+          padding: 1rem 1.3rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .footer {
+    padding-top: 10rem;
+    .about_store {
+      margin-bottom: 3rem;
+      p {
+        margin-top: 2rem;
+      }
+    }
+    .customer_care {
+      margin-bottom: 3rem;
+      ul {
+        margin-top: 3rem;
+      }
+    }
+    .info {
+      margin-bottom: 3rem;
+      ul {
+        margin-top: 3rem;
+      }
+    }
+    .contact_info {
+      p {
+        margin-top: 3rem;
       }
     }
   }

@@ -407,6 +407,7 @@ body {
   visibility: hidden;
   top: 4rem;
   right: 5rem;
+  position: absolute;
 }
 
 .hamburger label {
@@ -2308,6 +2309,103 @@ body {
   .singleProduct .product--details .buttons .buy--btn {
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .slider {
+    height: 40vh !important;
+    margin-top: 1rem;
+  }
+  .slider .carousel-inner .carousel-item img {
+    height: 40vh !important;
+  }
+  .ProductOffer {
+    padding-top: 10rem;
+  }
+  .ProductOffer .top_offer {
+    margin-bottom: 3rem !important;
+  }
+  .ProductOffer .top_offer img {
+    height: 30rem !important;
+  }
+  .newArrival__text--heading::before {
+    width: 2rem;
+    left: 8rem;
+    opacity: 0;
+  }
+  .newArrival__text--heading::after {
+    width: 2rem;
+    right: 7rem;
+    opacity: 0;
+  }
+  .newArrival__text--para {
+    word-break: break-word;
+    font-size: 1.2rem;
+  }
+  .parallax .limitedOffer__heading h3 {
+    font-size: 1.3rem !important;
+  }
+  .parallax .limitedOffer__heading p {
+    font-size: 1.1rem !important;
+  }
+  .mainProduct__text--heading::before {
+    width: 2rem;
+    left: 7rem;
+    display: none;
+  }
+  .mainProduct__text--heading::after {
+    width: 2rem;
+    right: 7rem;
+    display: none;
+  }
+  .mainProduct__text--para {
+    font-size: 1.1rem !important;
+    word-break: break-word;
+  }
+  .newsletter .email_subscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .newsletter .email_subscribe h2 {
+    font-size: 1.2rem !important;
+  }
+  .newsletter .email_subscribe .form--newsletter {
+    width: 80% !important;
+  }
+  .newsletter .email_subscribe .form--newsletter input[type="email"] {
+    width: 80% !important;
+    font-size: 1.2rem;
+  }
+  .newsletter .email_subscribe .form--newsletter .subscribe--btn {
+    padding: 1rem 1.3rem;
+    font-size: 1rem;
+  }
+  .footer {
+    padding-top: 10rem;
+  }
+  .footer .about_store {
+    margin-bottom: 3rem;
+  }
+  .footer .about_store p {
+    margin-top: 2rem;
+  }
+  .footer .customer_care {
+    margin-bottom: 3rem;
+  }
+  .footer .customer_care ul {
+    margin-top: 3rem;
+  }
+  .footer .info {
+    margin-bottom: 3rem;
+  }
+  .footer .info ul {
+    margin-top: 3rem;
+  }
+  .footer .contact_info p {
+    margin-top: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
