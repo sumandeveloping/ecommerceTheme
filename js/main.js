@@ -4,6 +4,7 @@ $(document).ready(function() {
     if ($(this).is(":checked")) {
       $(".hamburger span").css("background-color", "#fff");
       $(".menu2--wrapper").css("display", "block");
+      $(".menu2--wrapper").css("visibility", "visible");
       $(".menu--2").addClass("show_menu--2");
       $("body").addClass("body--responsive");
       $(".overlay").fadeIn(500);
@@ -12,7 +13,8 @@ $(document).ready(function() {
     } else {
       $(".hamburger label span").css("background-color", "#2b2a2a");
       $(".menu--2").removeClass("show_menu--2");
-      $(".menu2--wrapper").css("display", "none");
+      $(".menu2--wrapper").css("display", "block");
+      $(".menu2--wrapper").css("visibility", "hidden");
       $("body").removeClass("body--responsive");
       $(".overlay").fadeOut(200);
     }
@@ -24,6 +26,7 @@ $(document).ready(function() {
     $("body").removeClass("body--responsive");
     $(".hamburger label span").css("background-color", "#2b2a2a");
     $(".menu--2").removeClass("show_menu--2");
+    $(".menu2--wrapper").css("visibility", "hidden");
     $(this).fadeOut(200);
   });
 });

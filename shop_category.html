@@ -147,8 +147,70 @@
 
         <div class="row">
           <div class="col-md-12 col-lg-2">
-            <div class="product--filterBox d-flex flex-md-row flex-lg-column">
-              <label class="mb-5 filterAll--label"><input type="checkbox" class="filterAll--input"> Filter By</label>
+            <div class="product--filterBox d-flex flex-sm-column">
+              <label class="mb-md-2 mb-lg-5 filterAll--label"><input type="checkbox" class="filterAll--input"> Filter By</label>
+              <!-- For mobile devices -->
+              <div class="product--filterBox__mobile d-lg-none">
+                <ul>
+                  <li>
+                    Choose Price
+                    <div class="sub_item">
+                      <ul class="sub_item_list">
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Below Rs 1000</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Rs 1000 - 5000</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Rs 5000 - 10,000</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Above Rs 10,000</label></li>
+                      </ul>
+                    </div>
+                    
+                  </li>
+                  <li>
+                    Men's Upper
+                    <div class="sub_item">
+                      <ul class="sub_item_list">
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Shirt</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;T-Shirt</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Punjabi</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Fomal Suits</label></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    Men's Bottom
+                    <div class="sub_item">
+                      <ul class="sub_item_list">
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Jeans</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Formal Trousers</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Casual Pants</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Sport Pants</label></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    Women's Upper
+                    <div class="sub_item">
+                      <ul class="sub_item_list">
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Kurti</label></li class="sub_item_link">
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Shirt</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Lehenga</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Jacket</label></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    Women's Botoom
+                    <div class="sub_item">
+                      <ul class="sub_item_list">
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Jeans</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Leggings</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Casual Pants</label></li>
+                        <li class="sub_item_link"><label><input type="checkbox" class="common_selector">&nbsp;Fomal Pants</label></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- =========== -->
               <div class="filter--searchData"></div>
               <div class="gender_category mb-4">
                 <h2 class="mb-4">Gender</h2>
