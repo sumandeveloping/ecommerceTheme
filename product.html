@@ -34,7 +34,7 @@
         <li><a href="#" class="">About</a></li>
         <li><a href="shop_category.html" class="">Shop</a></li>
         <li><a href="#" class="">Contact</a></li>
-        <li><a href="#" class="">Login/Sign Up</a></li>
+        <li><a href="" class="" data-toggle="modal" data-target="#login_signUp_modal">Login/Sign Up</a></li>
         <li><a href="cart.html" class="">Cart</a href="#"></li>
       </ul>
     </div>
@@ -61,7 +61,7 @@
               <li><a href="#" class="menu__item">About</a></li>
               <li><a href="shop_category.html" class="menu__item">Shop</a></li>
               <li><a href="#" class="menu__item">Contact</a></li>
-              <li><a href="#" class="menu__item">Login/Sign Up</a></li>
+              <li><a class="menu__item" data-toggle="modal" data-target="#login_signUp_modal">Login/Sign Up</a></li>
               <li><a href="cart.html" class="menu__item">Cart</a href="#"></li>
             </ul>
           </nav>
@@ -101,7 +101,7 @@
                       <span>4.5</span>
                     </span>
                   </h2>
-                  <p class="review_rating text-secondary">300 Rebiew & Ratings</p>
+                  <p class="review_rating text-secondary">110 Review & 560 Ratings</p>
                   <p class="price">$350</p>
                   <p class="short_desc">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae rec  Quis laboriosam, hic quaerat veniam dignissimos atque veritatis optio 
@@ -148,9 +148,206 @@
               </div> <!-- End col-md-7-->
             </div>
           </div>
-         
         </div>
-      </div>
+
+        <!-- start prodduct desc,review,manufacturing -->
+        <div class="product--tab__wrapper mb-5">
+          <div class="row mt-7">
+            <div class="product--tab">
+              <ul class="d-flex">
+                <li class="tab-item"><a id="desc_tab" href="#desc" class="tab-link active" onclick="show_tab(this,event,'desc_tab');">Description</a></li>
+                <li class="tab-item"><a id="faq_tab" href="#faq" class="tab-link" onclick="show_tab(this,event,'faq_tab');">FAQ</a></li>
+                <li class="tab-item"><a id="review_tab" href="#reviews" class="tab-link" onclick="show_tab(this,event,'review_tab');">Reviews</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- end prodduct desc,review,manufacturing -->
+          <div class="tab--content mt-5">
+            <div id="desc" class="show fade">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae saepe voluptatem, facilis quisquam voluptas sed excepturi tempora velit iste, animi nobis? Consequuntur dolorum omnis laborum nemo et ipsum enim consectetur, deleniti reiciendis! Fuga maiores qui accusantium aperiam est minus facilis iure optio, consequuntur praesentium nostrum eaque perferendis consequatur reiciendis animi?</p>
+            </div>
+            <div id="faq">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="faq--wrapper">
+                    <div class="faq--box d-flex flex-column">
+                      <div class="faq__quetion d-flex flex-row">
+                        <p>1.</p>
+                        <p>Is this item durable?</p>
+                      </div>
+                      <div class="faq__answer d-flex flex-row">
+                        <p>Ans.</p>
+                        <p>Yes,ofcourse this item is durable.</p>
+                      </div>
+                      <div class="faq__quetion d-flex flex-row">
+                        <p>2.</p>
+                        <p>Is this item easy to use?</p>
+                      </div>
+                      <div class="faq__answer d-flex flex-row">
+                        <p>Ans.</p>
+                        <p>Yes,this item is very much easy to use and flexible.</p>
+                      </div>
+                    </div><!-- ENd faq--box -->
+                  </div><!-- End faq--wrapper -->
+                </div>
+              </div>
+              
+            </div><!-- End faq -->
+            <div id="reviews">
+               <!-- PRODUCT REVIEWS -->
+               <div class="row">
+                <div class="col-md-10 col-lg-8 mb-5 mb-lg-0">
+                  <!-- reviews part -->
+                  <div class="product--review d-flex flex-column w-100">
+                    <div class="review__box d-flex flex-row">
+                      <div class="review__person">
+                        <div class="person__img">
+                          <img src="./USERS/images/profile_01.jpg" alt="User Profile Image" title="User name">
+                        </div><!-- End person__img -->
+                        <h5 class="person__name">John Smith</h5>
+                        <p class="person__address">Los Angeles, U.S.</p>
+                      </div><!-- End review__person -->
+                      <div class="review__text d-flex flex-column">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiodio obcaecati commodidoloremque ab a assumenda, repellat, voluptatum itaque.</p>
+                        <div class="rating flex-lg-row">
+                          <p class="star">
+                            Rating : 
+                            <span>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </span>
+                          </p>
+                          <div class="d-flex flex-wrap ml-lg-4">
+                            <p>Found this helpful</p>
+                            <p class="helpful ml-3"><i class="fas fa-thumbs-up"></i> &nbsp;186</p>
+                          </div>
+                         
+                        </div><!-- End rating -->
+                      </div><!-- end revire__text-->
+                    </div><!-- end review box -->
+                    <div class="review__box d-flex flex-row">
+                      <div class="review__person">
+                        <div class="person__img">
+                          <img src="./USERS/images/profile_01.jpg" alt="User Profile Image" title="User name">
+                        </div><!-- End person__img -->
+                        <h5 class="person__name">John Smith</h5>
+                        <p class="person__address">Los Angeles, U.S.</p>
+                      </div><!-- End review__person -->
+                      <div class="review__text d-flex flex-column">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiodio obcaecati commodidoloremque ab a assumenda, repellat, voluptatum itaque.</p>
+                        <div class="rating flex-lg-row">
+                          <p class="star">
+                            Rating : 
+                            <span>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </span>
+                          </p>
+                          <div class="d-flex flex-wrap ml-lg-4">
+                            <p>Found this helpful</p>
+                            <p class="helpful ml-3"><i class="fas fa-thumbs-up"></i> &nbsp;186</p>
+                          </div>
+                         
+                        </div><!-- End rating -->
+                      </div><!-- end revire__text-->
+                    </div><!-- end review box -->
+                    <div class="review__box d-flex flex-row">
+                      <div class="review__person">
+                        <div class="person__img">
+                          <img src="./USERS/images/profile_01.jpg" alt="User Profile Image" title="User name">
+                        </div><!-- End person__img -->
+                        <h5 class="person__name">John Smith</h5>
+                        <p class="person__address">Los Angeles, U.S.</p>
+                      </div><!-- End review__person -->
+                      <div class="review__text d-flex flex-column">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiodio obcaecati commodidoloremque ab a assumenda, repellat, voluptatum itaque.</p>
+                        <div class="rating flex-lg-row">
+                          <p class="star">
+                            Rating : 
+                            <span>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </span>
+                          </p>
+                          <div class="d-flex flex-wrap ml-lg-4">
+                            <p>Found this helpful</p>
+                            <p class="helpful ml-3"><i class="fas fa-thumbs-up"></i> &nbsp;186</p>
+                          </div>
+                         
+                        </div><!-- End rating -->
+                      </div><!-- end revire__text-->
+                    </div><!-- end review box -->
+                    
+                  </div><!-- End product--review  -->
+                </div><!-- End col-lg-8 -->
+                <div class="col-md-8 col-lg-4">
+                  <!-- rating part -->
+                  <div class="product--rating__box d-flex flex-column py-1 pl-5 pr-2">
+                    <h4>Customer Reviews</h4>
+                    <div class="total_rating d-flex">
+                      <span class="d-flex">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <p class="ml-4">4.2 Out of 5</p>
+                    </div>
+                    <h5 class="review_no">110 Reviews & 560 Ratings</h5>
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">5 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">60%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">4 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">20%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">3 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 10%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">10%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">2 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 6%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">6%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">1 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 4%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">4%</p>
+                    </div><!-- End rating_percentage -->
+                  </div>
+                </div><!-- End col-lg-4 -->
+              </div>
+            </div><!-- End reviews -->
+          </div><!-- End tab--content -->
+        </div>
+        
+
+      </div><!-- End container -->
     </section>
     <!-- PRODUCT SECTION Ends -->
 
@@ -320,6 +517,87 @@
       </div>
     </section>
     <!-- newsletter SECTION Ends -->
+
+    <!-- =============== LOGIN MODAL ================ -->
+    <!-- Button trigger modal -->
+    <!-- LOGIN Modal -->
+    <div class="modal fade" id="login_signUp_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0 p-0">
+            <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 d-none d-lg-block">
+                <div class="login_img">
+                  <img src="./images/login.png" alt="Login Image" title="Login image">
+                </div>
+                <!-- ENd of login -->
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div id="login_signup_wrapper">
+                  <div class="login_devider d-flex">
+                    <label class="choose_login">Login to One Stop <span></span></label>
+                    <label class="choose_signup"> Sign Up <span></span></label>
+                  </div>
+                  <div class="login--box pl-3 pr-2">
+                    <!-- <h4 class="login--heading mb-5">LOGIN</h4> -->
+                    <form class="login--box__form">
+                      <div class="form--group">
+                        <input type="email" class="login--email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1">Email</label>
+                        <p class="email_error">Incorrect Email</p>
+                      </div>
+                      <div class="form--group mt-5">
+                        <input type="password" class="login--password" placeholder="Password" id="exampleInputPassword1">
+                        <label for="exampleInputPassword1">Password</label>
+                        <p class="password_error">Incorrect Password</p>
+                      </div>
+                      <button type="submit" class="login_btn mt-4">Login</button>
+                    </form>
+                    <p>Dont have an account yet? then <span class="showSignUpModal">Sign Up</span> here</p>
+                  </div><!-- End login--box -->
+                  <div class="signup--box pl-3 pr-2">
+                    <!-- <h4 class="signup--heading mb-5">Sign Up</h4> -->
+                    <form class="signup--box__form">
+                      <div class="form--group">
+                        <input type="text" class="signup--email" placeholder="First Name" id="exampleInputName" aria-describedby="emailHelp">
+                        <label for="exampleInputName">First Name</label>
+                      </div>
+                      <div class="form--group">
+                        <input type="email" class="signup--email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1">Email</label>
+                        <p class="email_error">Invalid Email</p>
+                      </div>
+                      <div class="form--group mt-5">
+                        <input type="password" class="signup--password" placeholder="Password" id="exampleInputPassword1">
+                        <label for="exampleInputPassword1">Password</label>
+                        <p class="password_error">Password should be between 8-12 charecters</p>
+                      </div>
+                      
+                      <button type="submit" class="login_btn mt-4">Sign Up</button>
+                    </form>
+                    <p>Already have an account? then <span class="showLoginModal">Login</span> here</p>
+                  </div><!-- End signup--box -->
+                </div>
+                <!-- End login_signup_wrapper -->
+               
+              </div>
+            </div>
+          </div>
+          <!-- <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- END LOGIN MODAL -->
+    <!-- =============== END LOGIN MODAL ================ -->
 
     <!-- footer SECTION starts -->
     <section class="footer">

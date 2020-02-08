@@ -1,1 +1,116 @@
-sdasd
+<div class="row mt-7">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="false">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <p>sdasd</p>
+            </div><!-- End description part-->
+            <div class="tab-pane fade" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
+            </div><!-- End faq part-->
+            <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+              <!-- PRODUCT REVIEWS -->
+              <div class="row">
+                <div class="col-md-10 col-lg-8 mb-5 mb-lg-0">
+                  <!-- reviews part -->
+                  <div class="product--review d-flex flex-column w-100">
+                    <div class="review__box d-flex flex-row">
+                      <div class="review__person">
+                        <div class="person__img">
+                          <img src="./USERS/images/profile_01.jpg" alt="User Profile Image" title="User name">
+                        </div><!-- End person__img -->
+                        <h5 class="person__name">John Smith</h5>
+                        <p class="person__address">Los Angeles, U.S.</p>
+                      </div><!-- End review__person -->
+                      <div class="review__text d-flex flex-column">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiodio obcaecati commodidoloremque ab a assumenda, repellat, voluptatum itaque.</p>
+                        <div class="rating flex-lg-row">
+                          <p class="star">
+                            Rating : 
+                            <span>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </span>
+                          </p>
+                          <div class="d-flex flex-wrap ml-lg-4">
+                            <p>Found this helpful</p>
+                            <p class="helpful ml-3"><i class="fas fa-thumbs-up"></i> &nbsp;186</p>
+                          </div>
+                         
+                        </div><!-- End rating -->
+                      </div><!-- end revire__text-->
+                    </div><!-- end review box -->
+                    
+                    
+                  </div>
+                </div>
+                <div class="col-md-8 col-lg-4">
+                  <!-- rating part -->
+                  <div class="product--rating__box d-flex flex-column py-1 pl-5 pr-2">
+                    <h4>Customer Reviews</h4>
+                    <div class="total_rating d-flex">
+                      <span class="d-flex">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <p class="ml-4">4.2 Out of 5</p>
+                    </div>
+                    <h5 class="review_no">110 Reviews & 560 Ratings</h5>
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">5 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">60%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">4 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">20%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">3 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 10%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">10%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">2 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 6%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">6%</p>
+                    </div><!-- End rating_percentage -->
+                    <div class="rating_percentage d-flex">
+                      <p class="mr-3">1 Star</p>
+                      <div class="progress w-50">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 4%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="ml-3">4%</p>
+                    </div><!-- End rating_percentage -->
+                  </div>
+                </div>
+              </div>
+            </div><!-- End total review part-->
+          </div>
+          <!-- End tab content -->
+
+        </div>

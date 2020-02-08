@@ -35,7 +35,7 @@
         <li><a href="#" class="">About</a></li>
         <li><a href="shop_category.html" class="">Shop</a></li>
         <li><a href="#" class="">Contact</a></li>
-        <li><a href="#" class="">Login/Sign Up</a></li>
+        <li><a href="" class="" data-toggle="modal" data-target="#login_signUp_modal">Login/Sign Up</a></li>
         <li><a href="cart.html" class="">Cart</a href="#"></li>
       </ul>
     </div>
@@ -62,7 +62,7 @@
               <li><a href="#" class="menu__item">About</a></li>
               <li><a href="shop_category.html" class="menu__item">Shop</a></li>
               <li><a href="#" class="menu__item">Contact</a></li>
-              <li><a href="#" class="menu__item">Login/Sign Up</a></li>
+              <li><a class="menu__item" data-toggle="modal" data-target="#login_signUp_modal">Login/Sign Up</a></li>
               <li><a href="cart.html" class="menu__item">Cart</a href="#"></li>
             </ul>
           </nav>
@@ -311,6 +311,83 @@
       </div>
     </section>
     <!-- newsletter SECTION Ends -->
+
+    <!-- =============== LOGIN MODAL ================ -->
+    <!-- Button trigger modal -->
+    <!-- LOGIN Modal -->
+    <div class="modal fade" id="login_signUp_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0 p-0">
+            <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 d-none d-lg-block">
+                <div class="login_img">
+                  <img src="./images/login.png" alt="Login Image" title="Login image">
+                </div>
+                <!-- ENd of login -->
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div id="login_signup_wrapper">
+                  <div class="login_devider d-flex">
+                    <label class="choose_login">Login to One Stop <span></span></label>
+                    <label class="choose_signup"> Sign Up <span></span></label>
+                  </div>
+                  <div class="login--box pl-3 pr-2">
+                    <!-- <h4 class="login--heading mb-5">LOGIN</h4> -->
+                    <form class="login--box__form">
+                      <div class="form--group">
+                        <input type="email" class="login--email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1">Email</label>
+                      </div>
+                      <div class="form--group mt-5">
+                        <input type="password" class="login--password" placeholder="Password" id="exampleInputPassword1">
+                        <label for="exampleInputPassword1">Password</label>
+                      </div>
+                      <button type="submit" class="login_btn">Login</button>
+                    </form>
+                    <p>Dont have an account yet? then <span class="showSignUpModal">Sign Up</span> here</p>
+                  </div><!-- End login--box -->
+                  <div class="signup--box pl-3 pr-2">
+                    <!-- <h4 class="signup--heading mb-5">Sign Up</h4> -->
+                    <form class="signup--box__form">
+                      <div class="form--group">
+                        <input type="text" class="signup--email" placeholder="First Name" id="exampleInputName" aria-describedby="emailHelp">
+                        <label for="exampleInputName">First Name</label>
+                      </div>
+                      <div class="form--group">
+                        <input type="email" class="signup--email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1">Email</label>
+                      </div>
+                      <div class="form--group mt-5">
+                        <input type="password" class="signup--password" placeholder="Password" id="exampleInputPassword1">
+                        <label for="exampleInputPassword1">Password</label>
+                      </div>
+                      
+                      <button type="submit" class="login_btn">Sign Up</button>
+                    </form>
+                    <p>Already have an account? then <span class="showLoginModal">Login</span> here</p>
+                  </div><!-- End signup--box -->
+                </div>
+                <!-- End login_signup_wrapper -->
+               
+              </div>
+            </div>
+          </div>
+          <!-- <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- END LOGIN MODAL -->
+    <!-- =============== END LOGIN MODAL ================ -->
 
     <!-- footer SECTION starts -->
     <section class="footer">
