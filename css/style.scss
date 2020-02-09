@@ -944,6 +944,9 @@ body {
 .mt-7 {
   margin-top: 7rem !important;
 }
+.font-16 {
+  font-size: 1.6rem !important;
+}
 .body--responsive {
   height: 100vh;
   overflow-y: hidden !important;
@@ -1016,6 +1019,10 @@ body {
 }
 .tab--fade {
   transition: opacity 0.15s linear;
+}
+.fade--out {
+  display: none;
+  transition: all 0.15s linear;
 }
 //===================================================================================================
 //=======================          PRODUCT PAGE  STARTS                  ============================
@@ -1410,6 +1417,10 @@ body {
             .progress {
               background-color: #dedede;
             }
+          }
+
+          .show_reviews_btn {
+            display: none;
           }
         }
       }
@@ -2726,7 +2737,7 @@ body {
 
   //PRODUCT PAGE - REVIEW SECTION
   .product--tab__wrapper {
-    min-height: 50rem !important;
+    min-height: 72rem !important;
     .product--tab {
       ul {
         font-size: 1.6rem !important;

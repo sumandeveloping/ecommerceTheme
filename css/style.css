@@ -1059,6 +1059,10 @@ body {
   margin-top: 7rem !important;
 }
 
+.font-16 {
+  font-size: 1.6rem !important;
+}
+
 .body--responsive {
   height: 100vh;
   overflow-y: hidden !important;
@@ -1143,6 +1147,12 @@ body {
 .tab--fade {
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
+}
+
+.fade--out {
+  display: none;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 
 .singleProduct {
@@ -1576,6 +1586,10 @@ body {
 
 .singleProduct .product--tab__wrapper .tab--content #reviews .product--rating__box .rating_percentage .progress {
   background-color: #dedede;
+}
+
+.singleProduct .product--tab__wrapper .tab--content #reviews .product--rating__box .show_reviews_btn {
+  display: none;
 }
 
 .shop__category {
@@ -2707,7 +2721,7 @@ body {
     font-size: 1.3rem;
   }
   .product--tab__wrapper {
-    min-height: 50rem !important;
+    min-height: 72rem !important;
   }
   .product--tab__wrapper .product--tab ul {
     font-size: 1.6rem !important;

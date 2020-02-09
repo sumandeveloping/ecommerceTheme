@@ -86,6 +86,7 @@ function show_tab(obj, e, tab_id) {
     //addclass
     $(id).addClass("tab--fade");
     $(id).addClass("tab--show");
+    $(id).addClass("w-100");
     $("#" + tab_id).addClass("tab--active");
 
     //remove class

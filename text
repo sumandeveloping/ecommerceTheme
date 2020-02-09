@@ -114,3 +114,6 @@
           <!-- End tab content -->
 
         </div>
+
+        order-2 order-md-1 d-none d-md-block
+        order-1 order-md-2
