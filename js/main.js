@@ -76,6 +76,7 @@ function showPreLoader() {
   $("body").css({ height: "auto", overflowY: "scroll" });
 }
 
+//product page TABS - desc,faq,reviews....
 function show_tab(obj, e, tab_id) {
   e.preventDefault();
   //id = $()
@@ -83,50 +84,50 @@ function show_tab(obj, e, tab_id) {
   var id = $(obj).attr("href");
   if (id == "#reviews") {
     //addclass
-    $(id).addClass("fade");
-    $(id).addClass("show");
-    $("#" + tab_id).addClass("active");
+    $(id).addClass("tab--fade");
+    $(id).addClass("tab--show");
+    $("#" + tab_id).addClass("tab--active");
 
     //remove class
     $("#desc")
-      .removeClass("fade")
-      .removeClass("show");
-    $("#desc_tab").removeClass("active");
+      .removeClass("tab--fade")
+      .removeClass("tab--show");
+    $("#desc_tab").removeClass("tab--active");
     $("#faq")
-      .removeClass("fade")
-      .removeClass("show");
-    $("#faq_tab").removeClass("active");
+      .removeClass("tab--fade")
+      .removeClass("tab--show");
+    $("#faq_tab").removeClass("tab--active");
   }
   if (id == "#faq") {
     //addclass
-    $(id).addClass("fade");
-    $(id).addClass("show");
-    $("#" + tab_id).addClass("active");
+    $(id).addClass("tab--fade");
+    $(id).addClass("tab--show");
+    $("#" + tab_id).addClass("tab--active");
 
     //remove class
     $("#desc")
-      .removeClass("fade")
-      .removeClass("show");
-    $("#desc_tab").removeClass("active");
+      .removeClass("tab--fade")
+      .removeClass("tab--show");
+    $("#desc_tab").removeClass("tab--active");
     $("#reviews")
-      .removeClass("fade")
-      .removeClass("show");
-    $("#review_tab").removeClass("active");
+      .removeClass("tab--fade")
+      .removeClass("tab--show");
+    $("#review_tab").removeClass("tab--active");
   }
   if (id == "#desc") {
     //addclass
-    $(id).addClass("fade");
-    $(id).addClass("show");
-    $("#" + tab_id).addClass("active");
+    $(id).addClass("tab--fade");
+    $(id).addClass("tab--show");
+    $("#" + tab_id).addClass("tab--active");
 
     //remove class
     $("#faq")
-      .removeClass("fade")
-      .removeClass("show");
-    $("#faq_tab").removeClass("active");
+      .removeClass("tab--fade")
+      .removeClass("tab--show");
+    $("#faq_tab").removeClass("tab--active");
     $("#reviews")
-      .removeClass("fade")
-      .removeClass("show");
-    $("#review_tab").removeClass("active");
+      .removeClass("tab--fade")
+      .removeClass("tab--show");
+    $("#review_tab").removeClass("tab--active");
   }
 }
