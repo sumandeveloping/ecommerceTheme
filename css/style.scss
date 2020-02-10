@@ -410,6 +410,7 @@ body {
             transition: 0.25s;
             font-size: 1.6rem;
             text-transform: uppercase;
+            cursor: pointer;
             z-index: 40;
 
             &::after {
@@ -1033,18 +1034,20 @@ body {
 
   .product--img {
     .product__bigImg {
-      height: auto;
+      width: 40rem;
+      height: auto; //53rem (moderate value for php)
       cursor: pointer;
     }
     .product__thumbnails {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       margin-top: 2rem;
 
       img {
-        width: 11rem;
-        height: 10rem;
+        width: 6rem;
+        height: 6rem;
         cursor: pointer;
+        margin-right: 1rem;
       }
     }
   }
@@ -2533,14 +2536,14 @@ body {
   //PRODUCT PAGE
   .product--img {
     .product__bigImg {
-      width: 72% !important;
+      width: 40rem !important;
     }
     .product__thumbnails {
       display: flex;
       flex-direction: column;
       justify-content: flex-start !important;
-      margin-top: 0 !important;
-      margin-left: 2rem;
+      margin-top: 1.5rem !important;
+      // margin-left: 2rem;
 
       img {
         margin-bottom: 1.5rem;
@@ -2847,6 +2850,17 @@ body {
   }
 
   //PRODUCT PAGE - REVIEW SECTION
+  .singleProduct {
+    .product--img {
+      .product__thumbnails {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0 !important;
+        margin-left: 1.5rem !important;
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
   #myTab {
     .nav-item {
       .nav-link {
@@ -2873,17 +2887,19 @@ body {
   //PRODUCT PAGE
   .product--img {
     .product__bigImg {
-      width: 72% !important;
+      width: 40rem;
+      height: auto;
+      cursor: pointer;
     }
     .product__thumbnails {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: flex-start !important;
-      margin-top: 0 !important;
-      margin-left: 2rem;
+      margin-top: 1.5rem !important;
 
       img {
         margin-bottom: 1.5rem;
+        margin-right: 1.5rem;
       }
     }
   }
@@ -2918,17 +2934,18 @@ body {
       display: flex !important;
       flex-direction: column;
       .product__bigImg {
-        width: 100% !important;
-        height: 30rem !important;
+        width: 40rem !important;
+        height: auto !important;
       }
       .product__thumbnails {
         flex-direction: row !important;
-        margin-left: 0;
-        margin-top: 2rem !important;
+        margin-left: 0 !important;
+        margin-top: 1.5rem !important;
         img {
-          width: 10rem;
+          width: 6rem;
+          height: 6rem;
           &:not(:last-child) {
-            margin-right: 12.5px;
+            margin-right: 0.8rem;
           }
         }
       }
@@ -3142,8 +3159,8 @@ body {
         flex-wrap: wrap;
 
         img {
-          width: 9.7rem;
-          height: 9.7rem;
+          width: 6rem;
+          height: 6rem;
         }
       }
     }
