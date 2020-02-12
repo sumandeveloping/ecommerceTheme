@@ -569,6 +569,38 @@ body {
         font-size: 1rem;
       }
 
+      //wishlist icon
+      &--wishlist {
+        position: absolute;
+        display: inline-block;
+        // padding: 0.2rem 0.5rem;
+        background-color: #f7f7f7;
+        // color: #ee4949;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        right: 2rem;
+        top: 1.2rem;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 2rem;
+        box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
+        transition: transform 0.25s ease;
+
+        i {
+          color: #afafaf;
+          transition: color 0.25s ease;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+          i {
+            color: rgba(248, 131, 121, 0.9);
+          }
+        }
+      }
+
       &--cart {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.7);
@@ -584,7 +616,7 @@ body {
         span {
           display: inline-block;
           height: 4rem;
-          width: 4rem;
+          width: 6rem;
           text-align: center;
           color: #f7f7f7;
           font-size: 1.3rem;
@@ -755,15 +787,47 @@ body {
       cursor: pointer;
 
       &--newIcon {
+        position: absolute;
         display: inline-block;
         padding: 0.2rem 0.5rem;
         background-color: red;
         color: #f7f7f7;
-        position: absolute;
         left: 1rem;
         top: 1.2rem;
         text-transform: uppercase;
         font-size: 1rem;
+      }
+
+      //wishlist icon
+      &--wishlist {
+        position: absolute;
+        display: inline-block;
+        // padding: 0.2rem 0.5rem;
+        background-color: #f7f7f7;
+        // color: #ee4949;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        right: 2rem;
+        top: 1.2rem;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 2rem;
+        box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
+        transition: transform 0.25s ease;
+
+        i {
+          color: #afafaf;
+          transition: color 0.25s ease;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+          i {
+            color: rgba(248, 131, 121, 0.9);
+          }
+        }
       }
 
       &--cart {
@@ -781,7 +845,7 @@ body {
         span {
           display: inline-block;
           height: 4rem;
-          width: 4rem;
+          width: 6rem;
           text-align: center;
           color: #f7f7f7;
           font-size: 1.3rem;
