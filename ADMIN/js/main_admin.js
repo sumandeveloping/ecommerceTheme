@@ -35,7 +35,13 @@ function validate_is_number(evt) {
   }
 }
 
-//alternative method
+function multiple_keywords(evt, obj) {
+  var val = $(obj).val();
+  $(obj).val(val.replace(/[\s]+/g, ","));
+  console.log(val);
+}
+
+// alternative method(in this method we hv to use onkeyup instead of onkeydown)
 // function isNumber(obj) {
 //   var $val = $(obj).val();
 //   console.log($val);
@@ -46,7 +52,7 @@ function validate_is_number(evt) {
 //   );
 // }
 
-//another alternative method
+//another alternative method(in this method u cant use backspace or arrow buttons from keyboard - it is drawback)
 // function isNumber(evt) {
 //   var char = String.fromCharCode(evt.keyCode);
 //   if (!/[0-9]/.test(char)) {

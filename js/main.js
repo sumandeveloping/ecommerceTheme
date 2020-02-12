@@ -68,7 +68,41 @@ $(document).ready(function() {
     });
     $(".login--box__form").trigger("reset");
   });
+
+  //PRODUCT PAGE QUANTITY increment/decrement
+  $(".plus").on("click", function(e) {
+    //console.log(e);
+    var qty = parseFloat($(".qtyValue").val());
+    //console.log(qty + 1);
+    $(".qtyValue").val(qty + 1);
+  });
+  $(".minus").on("click", function(e) {
+    //console.log(e);
+    var qty = parseFloat($(".qtyValue").val());
+    //console.log(qty - 1);
+    $(".qtyValue").val(qty - 1);
+
+    if ($(".qtyValue").val() == 0) {
+      $(".qtyValue").val(1); //bcz qty can not be -VE..
+    }
+  });
 }); // end document.ready
+
+//MOUSE CURSOR EFFECT
+let cursor = $(".mouse_cursor");
+let menuItem = document.querySelectorAll(".menu__item"); //selecting all menu items
+$(window).on("mousemove", mousemove);
+function mousemove(e) {
+  cursor.css({ top: e.pageY, left: e.pageX });
+}
+menuItem.forEach(item => {
+  item.addEventListener("mouseover", () => {
+    $(".mouse_cursor").addClass("cursor_grow");
+  });
+  item.addEventListener("mouseout", () => {
+    $(".mouse_cursor").removeClass("cursor_grow");
+  });
+});
 
 //CSS PRELOADER
 function showPreLoader() {

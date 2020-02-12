@@ -35,6 +35,7 @@ body {
   overflow-x: hidden !important;
   height: 100vh;
   overflow-y: hidden;
+  cursor: none;
 }
 
 /* ========================= */
@@ -151,6 +152,29 @@ body {
   100% {
     background-color: rgb(140, 218, 25);
   }
+}
+
+//Mourse Cursor
+.mouse_cursor {
+  position: absolute;
+  z-index: 1000;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #ee4949;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transform-origin: center;
+}
+//Cursor GROW
+.cursor_grow {
+  transform: translate(-50%, -50%) scale(2.1);
+  border: 1px solid rgb(49, 49, 49);
+  transition: all 0.2s ease;
+  transition-property: transform;
 }
 
 //categoryAll--modal
@@ -411,7 +435,7 @@ body {
             font-size: 1.6rem;
             text-transform: uppercase;
             cursor: pointer;
-            z-index: 40;
+            z-index: 650;
 
             &::after {
               content: "";
@@ -437,6 +461,11 @@ body {
       }
     }
   }
+}
+
+.menu__item:hover .mouse_cursor {
+  transform: scale(1.85) !important;
+  // background-color: ;
 }
 
 //SLIDER SECTION

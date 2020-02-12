@@ -1,10 +1,9 @@
 <?php 
-$con = new mysqli("localhost","root","","subid_ecart");
+$con = mysqli_connect("localhost","root","","subid_ecart");
 
 // Check connection
-if ($con -> connect_errno) {
-  echo "Failed to connect to MySQL DATABASE: " . $con -> connect_error;
-  exit();
+if (!$con) {
+  die("Mysqli Query error: ".mysqli_error());
 }
 
 ?>
