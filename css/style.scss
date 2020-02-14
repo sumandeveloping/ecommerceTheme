@@ -1041,6 +1041,9 @@ body {
 .w-40 {
   width: 40% !important;
 }
+.font25 {
+  font-size: 2.5rem !important;
+}
 .font-16 {
   font-size: 1.6rem !important;
 }
@@ -2275,7 +2278,7 @@ body {
   .login--box {
     position: relative;
     opacity: 1;
-    background-color: ivory;
+    // background-color: ivory;
     width: 85%;
     z-index: 1;
     .login--heading {
@@ -2356,7 +2359,7 @@ body {
     top: 0;
     left: 11px;
     margin-top: 5.5rem;
-    background-color: ivory;
+    // background-color: ivory;
     width: 85%;
     z-index: -1;
     .signup--heading {
@@ -2373,7 +2376,7 @@ body {
 
         label {
           position: absolute;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           left: 0;
           top: -2rem;
           color: #ee4949;
@@ -3090,6 +3093,7 @@ body {
 
   //LOGIN & SIGNUP MODAL
   #login_signup_wrapper {
+    height: 47rem !important;
     .login_devider {
       .choose_login,
       .choose_signup {

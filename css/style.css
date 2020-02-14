@@ -1170,6 +1170,10 @@ body {
   width: 40% !important;
 }
 
+.font25 {
+  font-size: 2.5rem !important;
+}
+
 .font-16 {
   font-size: 1.6rem !important;
 }
@@ -2352,7 +2356,6 @@ body {
 #login_signup_wrapper .login--box {
   position: relative;
   opacity: 1;
-  background-color: ivory;
   width: 85%;
   z-index: 1;
 }
@@ -2441,7 +2444,6 @@ body {
   top: 0;
   left: 11px;
   margin-top: 5.5rem;
-  background-color: ivory;
   width: 85%;
   z-index: -1;
 }
@@ -2464,7 +2466,7 @@ body {
 
 #login_signup_wrapper .signup--box__form .form--group label {
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   left: 0;
   top: -2rem;
   color: #ee4949;
@@ -3041,6 +3043,9 @@ body {
   }
   .singleProduct .product--details .pincode_wrap .pincode {
     margin-left: 5rem;
+  }
+  #login_signup_wrapper {
+    height: 47rem !important;
   }
   #login_signup_wrapper .login_devider .choose_login,
   #login_signup_wrapper .login_devider .choose_signup {
