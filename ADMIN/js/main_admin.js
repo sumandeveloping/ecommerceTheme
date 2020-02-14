@@ -59,3 +59,14 @@ function multiple_keywords(evt, obj) {
 //     evt.returnValue = false;
 //   }
 // }
+
+//SHow image before inserting into database
+function show_image1(evt, imgID) {
+  console.log(evt);
+  var img = document.getElementById(imgID);
+  console.log(img);
+  img.classList.remove("invisible");
+  img.classList.add("visible");
+  // img.addClass("d-block");
+  img.src = URL.createObjectURL(evt.target.files[0]);
+}

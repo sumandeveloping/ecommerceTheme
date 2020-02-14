@@ -35,7 +35,7 @@ body {
   overflow-x: hidden !important;
   height: 100vh;
   overflow-y: hidden;
-  cursor: none;
+  // cursor: none;
 }
 
 /* ========================= */
@@ -1037,6 +1037,9 @@ body {
 //UTILITY CLASS
 .mt-7 {
   margin-top: 7rem !important;
+}
+.w-40 {
+  width: 40% !important;
 }
 .font-16 {
   font-size: 1.6rem !important;
@@ -2291,7 +2294,7 @@ body {
           position: absolute;
           font-size: 1.4rem;
           left: 0;
-          top: -3rem;
+          top: -2rem;
           color: #383838;
           opacity: 1;
           color: #ee4949;
@@ -2372,7 +2375,7 @@ body {
           position: absolute;
           font-size: 1.5rem;
           left: 0;
-          top: -3rem;
+          top: -2rem;
           color: #ee4949;
           opacity: 1;
           transition: all 0.2s ease-in-out;
@@ -3081,6 +3084,16 @@ body {
         .pincode {
           margin-left: 5rem;
         }
+      }
+    }
+  }
+
+  //LOGIN & SIGNUP MODAL
+  #login_signup_wrapper {
+    .login_devider {
+      .choose_login,
+      .choose_signup {
+        font-size: 1.3rem !important;
       }
     }
   }

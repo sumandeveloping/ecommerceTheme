@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,cAAc;CACtB",
+    "sources": [
+        "custom-admin.scss"
+    ],
+    "names": [],
+    "file": "custom-admin.css"
+}
