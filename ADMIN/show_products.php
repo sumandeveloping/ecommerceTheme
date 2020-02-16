@@ -68,23 +68,32 @@ $get_products = mysqli_query($con,"SELECT * FROM `products` ORDER BY date DESC")
               $r_product_cat = mysqli_fetch_assoc($get_product_cat);
               //APPROVAL STATUS
               $approval = $row_products['approval'];
-              $appr_str = ($approval) ? "<i class='fas fa-check-circle text-success'>" : "<i class='fas fa-question-circle text-danger'>" ;
+              $appr_str = ($approval) ? "<i class='fas fa-check-circle text-success' style='font-size:16px;'>" : "<i class='fas fa-question-circle text-danger' style='font-size:16px;'>" ;
+
+              //IMAGES - 1 ==> showing thumb image
+              // $img_main_arr1 = explode(".",$row_products['product_img1']);
+              // $img_arr1 = explode('_',$img_main_arr1[0]);
+              // $img_thumb_name1 = "".$img_arr1[0]."_".$img_arr1[1]."_thumb_".$row_products['product_id']."_01.".$img_main_arr1[1]; 
+              // $img_path1 = "./img/product_images/thumbnail/".$img_thumb_name1;
+
+             
+             
           ?>
             <tr>
               <td align="center"><?=$count;?></td>
-              <td align="center"><a href="edit_product.php?p_id=<?=$row_products['product_id'];?>&action=edit"><i class="fas fa-edit text-primary" style="font-size:13px; cursor:pointer;"></i></a></td>
+              <td align="center"><a href="edit_product.php?p_id=<?=$row_products['product_id'];?>&action=edit"><i class="fas fa-edit text-primary" style="font-size:16px; cursor:pointer;"></i></a></td>
               <td align="center"><?=$appr_str;?></td>
               <td><?=$pro_title;?></td>
               <td><?=$row_products['product_price'];?></td>
               <td>555</td>
               <td><?=$r_gender_cat['cat_title'];?></td>
               <td><?=$r_product_cat['p_cat_title'];?></td>
-              <td align="center"><img src="./img/product_images/thumbnail/pImg_1482899_thumb_18_01.jpg" style="width: 50px;height: auto;"></td>
-              <td align="center">img2</td>
-              <td align="center">img3</td>
+              <td align="center"><img src="<?php echo get_ImageSize_path($row_products['product_img3'],'thumb',$row_products['product_id'],'01');?>" style="width: 50px;height: auto;"></td>
+              <td align="center"><img src="<?php echo get_ImageSize_path($row_products['product_img3'],'thumb',$row_products['product_id'],'02');?>" style="width: 50px;height: auto;"></td>
+              <td align="center"><img src="<?php echo get_ImageSize_path($row_products['product_img3'],'thumb',$row_products['product_id'],'03');?>" style="width: 50px;height: auto;"></td>
               <td><?=date("d/m/Y", strtotime($date));?></td>
               <td><?=$row_products['product_keywords'];?></td>
-              <td><i class='fas fa-check text-success'></i>&nbsp;&nbsp;In Stock</td>
+              <td><i class='fas fa-check text-success'"></i>&nbsp;&nbsp;In Stock</td>
               <td><?=$row_products['views'];?></td>
             </tr>
             <?php } //End while loop of products?>

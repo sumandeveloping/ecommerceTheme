@@ -1,13 +1,21 @@
 <?php
 session_start();
 ob_start();
+date_default_timezone_set("Asia/Kolkata");
 
 $shell = shell_exec('ipconfig/all');
 $shell_arr = explode(':',$shell);
 $macinfo = explode(" ",$shell_arr[9]);
 $macAddress = $macinfo[1]; //storing mac address
 // print_r($macAddress);
-        
+
+// query confirmation
+function confirm_query($result){
+    global $con;
+    if(!$result) {
+        die("QUERY FAILED :".mysqli_error($con));
+    }
+}
 
 // Check to see if the type of file uploaded is a valid image type
 function is_valid_type($file_typ)
@@ -40,5 +48,33 @@ function is_product_valid($pId){
 
 }
 
+function get_ImageSize_path($dbImgName,$size,$pId,$imgNo){
+    $img_main_arr = explode(".",$dbImgName);
+    $ext = $img_main_arr[1];
+
+    $imgName_arr = explode("_",$img_main_arr[0]);
+    $imgName =  "".$imgName_arr[0]."_".$imgName_arr[1]."_".$size."_".$pId."_".$imgNo.".".$ext."";
+
+    //electing the folder
+    // $folder = ($size == 'thumb') ? 'thumbnail';
+    // $folder = ($size == 'main') ? 'frontFace';
+    // $folder = ($size == 'medium') ? 'medium';
+    // $folder = ($size == 'shopCat') ? 'shop_category_img';
+    $folder = '';
+
+    if($size == 'thumb') 
+        $folder = 'thumbnail';
+    if($size == 'main')
+        $folder = 'frontFace';
+    if($size == 'medium')
+        $folder = 'medium';
+    if($size == 'shopCat')
+        $folder = 'shop_category_img';
+    
+    //imgPath
+    $imgPath = "./img/product_images/".$folder."/".$imgName;
+
+    return $imgPath;
+}
 
 ?>

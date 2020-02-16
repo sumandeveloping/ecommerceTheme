@@ -1,4 +1,7 @@
 <?php include_once("./includes/header.php"); ?>
+<?php
+set_time_limit(0);
+?>
 
 <?php
 $error = 0;
@@ -15,7 +18,7 @@ if(isset($_POST['submit'])){
   $p_title = escape($_POST['title']);
   $p_price = escape($_POST['price']);
   $p_qty = escape($_POST['quantity']);
-  $p_category = escape($_POST['category']); //gender category
+  $p_gender_category = escape($_POST['category']); //gender category
   $p_pro_category = escape($_POST['product_category']); //product category
   $p_desc = escape($_POST['product_desc']);
   $p_keywords = ucfirst(escape($_POST['keywords']));
@@ -130,10 +133,13 @@ if(isset($_POST['submit'])){
 
   //UPLOAD IMAGE
   if(!$error){
+      //storing image name into database
+      $img1_db_name=$img2_db_name=$img3_db_name="";
       //IMAGE 1
       if($img1_name != ""){
-        //large img(original img1)
+        //large img(original img1)  ==> moving original image to folder
         copy($img1_src,"./img/product_images/large/pImg_".$rand."_large_".$maxID."_01".".".$img1_ext);
+        $img1_db_name = "pImg_".$rand."_main_".$maxID."_01".".".$img1_ext;
         //IMAGE CUTTING
         switch($img1_typ){
         
@@ -185,8 +191,9 @@ if(isset($_POST['submit'])){
 
       //IMAGE 2
       if($img2_name != ""){
-        //large img(original img2)
-        copy($img2_src,"./img/product_images/large/pImg_".$rand."_large_".$maxID."_02".".".$img1_ext);
+        //large img(original img2)  ==> moving original image to folder
+        copy($img2_src,"./img/product_images/large/pImg_".$rand."_large_".$maxID."_02".".".$img2_ext);
+        $img2_db_name = "pImg_".$rand."_main_".$maxID."_02".".".$img2_ext;
         //IMAGE CUTTING
         switch($img2_typ){
         
@@ -201,10 +208,10 @@ if(isset($_POST['submit'])){
             //product page size for medium img
             $tmp4 = imgResizing($newImgSrc,$img2_properties[0],$img2_properties[1],400);
 
-            imagejpeg($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_02".".".$img1_ext);
-            imagejpeg($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_02".".".$img1_ext);
-            imagejpeg($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_02".".".$img1_ext);
-            imagejpeg($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_02".".".$img1_ext);
+            imagejpeg($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_02".".".$img2_ext);
+            imagejpeg($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_02".".".$img2_ext);
+            imagejpeg($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_02".".".$img2_ext);
+            imagejpeg($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_02".".".$img2_ext);
             //deleting tmp images from temp folder
             // imagedestroy($img1_src);
             // imagedestroy($tmp1);
@@ -222,10 +229,10 @@ if(isset($_POST['submit'])){
             //product page size for medium img
             $tmp4 = imgResizing($newImgSrc,$img2_properties[0],$img2_properties[1],400);
 
-            imagepng($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_02".".".$img1_ext);
-            imagepng($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_02".".".$img1_ext);
-            imagepng($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_02".".".$img1_ext);
-            imagepng($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_02".".".$img1_ext);
+            imagepng($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_02".".".$img3_ext);
+            imagepng($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_02".".".$img3_ext);
+            imagepng($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_02".".".$img3_ext);
+            imagepng($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_02".".".$img3_ext);
             //deleting tmp images from tmp folder
             // imagedestroy($img1_src);
             // echo $tmp1;
@@ -237,8 +244,12 @@ if(isset($_POST['submit'])){
 
       //IMAGE 3
       if($img3_name != ""){
-        //large img(original img3)
-        copy($img3_src,"./img/product_images/large/pImg_".$rand."_large_".$maxID."_03".".".$img1_ext);
+        //large img(original img3)  ==> moving original image to folder
+        if(!copy($img3_src,"./img/product_images/large/pImg_".$rand."_large_".$maxID."_03".".".$img3_ext)){
+          die("image 3 not copied");
+        };
+
+        $img3_db_name = "pImg_".$rand."_main_".$maxID."_03".".".$img3_ext;
         //IMAGE CUTTING
         switch($img3_typ){
         
@@ -253,10 +264,10 @@ if(isset($_POST['submit'])){
             //product page size for medium img
             $tmp4 = imgResizing($newImgSrc,$img3_properties[0],$img3_properties[1],400);
 
-            imagejpeg($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_03".".".$img1_ext);
-            imagejpeg($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_03".".".$img1_ext);
-            imagejpeg($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_03".".".$img1_ext);
-            imagejpeg($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_03".".".$img1_ext);
+            imagejpeg($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_03".".".$img3_ext);
+            imagejpeg($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_03".".".$img3_ext);
+            imagejpeg($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_03".".".$img3_ext);
+            imagejpeg($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_03".".".$img3_ext);
             //deleting tmp images from temp folder
             // imagedestroy($img1_src);
             // imagedestroy($tmp1);
@@ -274,10 +285,10 @@ if(isset($_POST['submit'])){
             //product page size for medium img
             $tmp4 = imgResizing($newImgSrc,$img3_properties[0],$img3_properties[1],400);
 
-            imagepng($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_03".".".$img1_ext);
-            imagepng($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_03".".".$img1_ext);
-            imagepng($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_03".".".$img1_ext);
-            imagepng($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_03".".".$img1_ext);
+            imagepng($tmp1,"./img/product_images/frontFace/pImg_".$rand."_main_".$maxID."_03".".".$img3_ext);
+            imagepng($tmp2,"./img/product_images/shop_category_img/pImg_".$rand."_shopCat_".$maxID."_03".".".$img3_ext);
+            imagepng($tmp3,"./img/product_images/thumbnail/pImg_".$rand."_thumb_".$maxID."_03".".".$img3_ext);
+            imagepng($tmp4,"./img/product_images/medium/pImg_".$rand."_medium_".$maxID."_03".".".$img3_ext);
             //deleting tmp images from tmp folder
             // imagedestroy($img1_src);
             // echo $tmp1;
@@ -287,6 +298,14 @@ if(isset($_POST['submit'])){
         }
       }
     
+      //INSERT INTO DATABASE - QUERY
+      $approval=0;
+      $status=1; //product status [1=in stock,  0=not in stock]
+      $sql = "INSERT INTO `products`(`product_id`, `p_cat_id`, `cat_id`, `date`, `product_title`, `product_img1`, `product_img2`, `product_img3`, `product_price`, `product_desc`, `product_keywords`, `product_brand`, `product_status`, `views`, `approval`)"; 
+      $sql.= " VALUES ('','$p_pro_category','$p_gender_category',now(),'$p_title','$img1_db_name','$img2_db_name','$img3_db_name','$p_price','$p_desc','$p_keywords','','$status','0','$approval')";
+      $query = mysqli_query($con,$sql);
+      confirm_query($query);
+      header("Location: ".htmlspecialchars($_SERVER['PHP_SELF'])."?msg=success");
 
   } // end not error  
 
@@ -297,6 +316,8 @@ if(isset($_POST['submit'])){
 } //if isset post submit
 
 ?>
+
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <!-- Page Heading -->
@@ -313,8 +334,17 @@ if(isset($_POST['submit'])){
       
     // }
   ?>
+  <?php
+    if(isset($_GET['msg']) && $_GET['msg']=='success'){
+  ?>
+  <div class="card mt-4">
+    <div class="card-header" style="background: #d7fdc8;color:#3c3939;">
+      <p class="m-0">Product has been added successfully</p>
+    </div>
+  </div>
+    <?php } ?>
   
-  <div class="card">
+  <div class="card mt-4">
     <div class="card-body">
       <div class="row">
         <div class="col-md-4">
@@ -345,6 +375,7 @@ if(isset($_POST['submit'])){
                 class="form-control-file"
                 name="img1"
                 placeholder="Product Image 1"
+                accept="image/*"
                 onchange="show_image1(event,'showImg1')"
               />
               <p class="text-primary mb-1">*This is main image that will be shown to index page</p>
@@ -364,6 +395,7 @@ if(isset($_POST['submit'])){
                 class="form-control-file"
                 name="img2"
                 placeholder="Product Image 2"
+                accept="image/*"
                 onchange="show_image1(event,'showImg2')"
               />
               <?php
@@ -383,6 +415,7 @@ if(isset($_POST['submit'])){
                 class="form-control-file"
                 name="img3"
                 placeholder="Product Image 3"
+                accept="image/*"
                 onchange="show_image1(event,'showImg3')"
               />
               <?php

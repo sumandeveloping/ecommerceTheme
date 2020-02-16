@@ -548,6 +548,9 @@ body {
     &:hover &__img--cart {
       opacity: 1;
     }
+    &:hover .product__img--arrival {
+      transform: scale(1.25);
+    }
 
     &__img {
       width: 100%;
@@ -556,6 +559,16 @@ body {
       position: relative;
       margin-bottom: 2rem;
       cursor: pointer;
+      overflow: hidden;
+
+      .product__img--arrival {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        min-height: 35rem;
+        height: auto;
+        transition: transform 0.25s ease;
+      }
 
       &--newIcon {
         display: inline-block;
@@ -567,6 +580,7 @@ body {
         top: 1.2rem;
         text-transform: uppercase;
         font-size: 1rem;
+        z-index: 2;
       }
 
       //wishlist icon
@@ -585,8 +599,9 @@ body {
         text-align: center;
         line-height: 4rem;
         font-size: 2rem;
-        box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
+        box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.25);
         transition: transform 0.25s ease;
+        z-index: 2;
 
         i {
           color: #afafaf;
@@ -612,6 +627,7 @@ body {
         transition: opacity 0.3s ease-in-out;
         opacity: 0;
         transform-origin: bottom;
+        z-index: 2;
 
         span {
           display: inline-block;
@@ -778,13 +794,27 @@ body {
       opacity: 1;
     }
 
+    &:hover .product__img {
+      transform: scale(1.25);
+    }
+
     &__img {
       width: 100%;
       display: block;
       height: 35rem;
       position: relative;
       margin-bottom: 2rem;
+      overflow: hidden;
       cursor: pointer;
+
+      .product__img {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        min-height: 35rem;
+        height: auto;
+        transition: transform 0.25s ease;
+      }
 
       &--newIcon {
         position: absolute;
@@ -796,6 +826,7 @@ body {
         top: 1.2rem;
         text-transform: uppercase;
         font-size: 1rem;
+        z-index: 2;
       }
 
       //wishlist icon
@@ -814,8 +845,9 @@ body {
         text-align: center;
         line-height: 4rem;
         font-size: 2rem;
-        box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
+        box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.25);
         transition: transform 0.25s ease;
+        z-index: 2;
 
         i {
           color: #afafaf;
@@ -841,6 +873,7 @@ body {
         transition: opacity 0.3s ease-in-out;
         opacity: 0;
         transform-origin: bottom;
+        z-index: 2;
 
         span {
           display: inline-block;
@@ -1040,6 +1073,9 @@ body {
 }
 .w-40 {
   width: 40% !important;
+}
+.pt-10 {
+  padding-top: 10rem !important;
 }
 .font25 {
   font-size: 2.5rem !important;
@@ -1482,6 +1518,8 @@ body {
 
         //rating box
         .product--rating__box {
+          max-height: 25rem;
+          overflow-y: scroll;
           h4 {
             &:first-child {
               font-size: 1.8rem;
@@ -3098,6 +3136,32 @@ body {
       .choose_login,
       .choose_signup {
         font-size: 1.3rem !important;
+      }
+    }
+    .login--box {
+      &__form {
+        .form--group {
+          p.email_error,
+          p.password_error {
+            font-size: 1rem !important;
+          }
+        }
+      }
+      p {
+        font-size: 1.2rem !important;
+      }
+    }
+    .signup--box {
+      &__form {
+        .form--group {
+          p.email_error,
+          p.password_error {
+            font-size: 1rem !important;
+          }
+        }
+      }
+      p {
+        font-size: 1.2rem !important;
       }
     }
   }

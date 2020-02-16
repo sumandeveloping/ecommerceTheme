@@ -660,6 +660,11 @@ body {
   opacity: 1;
 }
 
+.newArrival--product:hover .product__img--arrival {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
 .newArrival--product__img {
   width: 100%;
   display: block;
@@ -667,6 +672,19 @@ body {
   position: relative;
   margin-bottom: 2rem;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.newArrival--product__img .product__img--arrival {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  min-height: 35rem;
+  height: auto;
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 }
 
 .newArrival--product__img--newIcon {
@@ -679,6 +697,7 @@ body {
   top: 1.2rem;
   text-transform: uppercase;
   font-size: 1rem;
+  z-index: 2;
 }
 
 .newArrival--product__img--wishlist {
@@ -694,12 +713,13 @@ body {
   text-align: center;
   line-height: 4rem;
   font-size: 2rem;
-  -webkit-box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.25);
   -webkit-transition: -webkit-transform 0.25s ease;
   transition: -webkit-transform 0.25s ease;
   transition: transform 0.25s ease;
   transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+  z-index: 2;
 }
 
 .newArrival--product__img--wishlist i {
@@ -734,6 +754,7 @@ body {
   opacity: 0;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+  z-index: 2;
 }
 
 .newArrival--product__img--cart span {
@@ -896,13 +917,31 @@ body {
   opacity: 1;
 }
 
+.mainProduct--product:hover .product__img {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
 .mainProduct--product__img {
   width: 100%;
   display: block;
   height: 35rem;
   position: relative;
   margin-bottom: 2rem;
+  overflow: hidden;
   cursor: pointer;
+}
+
+.mainProduct--product__img .product__img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  min-height: 35rem;
+  height: auto;
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 }
 
 .mainProduct--product__img--newIcon {
@@ -915,6 +954,7 @@ body {
   top: 1.2rem;
   text-transform: uppercase;
   font-size: 1rem;
+  z-index: 2;
 }
 
 .mainProduct--product__img--wishlist {
@@ -930,12 +970,13 @@ body {
   text-align: center;
   line-height: 4rem;
   font-size: 2rem;
-  -webkit-box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.3rem 1rem 0rem rgba(0, 0, 0, 0.25);
   -webkit-transition: -webkit-transform 0.25s ease;
   transition: -webkit-transform 0.25s ease;
   transition: transform 0.25s ease;
   transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+  z-index: 2;
 }
 
 .mainProduct--product__img--wishlist i {
@@ -970,6 +1011,7 @@ body {
   opacity: 0;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+  z-index: 2;
 }
 
 .mainProduct--product__img--cart span {
@@ -1168,6 +1210,10 @@ body {
 
 .w-40 {
   width: 40% !important;
+}
+
+.pt-10 {
+  padding-top: 10rem !important;
 }
 
 .font25 {
@@ -1654,6 +1700,11 @@ body {
 .singleProduct .product--tab__wrapper .tab--content #reviews .product--review .review__box:hover .person__img > img {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
+}
+
+.singleProduct .product--tab__wrapper .tab--content #reviews .product--rating__box {
+  max-height: 25rem;
+  overflow-y: scroll;
 }
 
 .singleProduct .product--tab__wrapper .tab--content #reviews .product--rating__box h4:first-child {
@@ -3050,6 +3101,20 @@ body {
   #login_signup_wrapper .login_devider .choose_login,
   #login_signup_wrapper .login_devider .choose_signup {
     font-size: 1.3rem !important;
+  }
+  #login_signup_wrapper .login--box__form .form--group p.email_error,
+  #login_signup_wrapper .login--box__form .form--group p.password_error {
+    font-size: 1rem !important;
+  }
+  #login_signup_wrapper .login--box p {
+    font-size: 1.2rem !important;
+  }
+  #login_signup_wrapper .signup--box__form .form--group p.email_error,
+  #login_signup_wrapper .signup--box__form .form--group p.password_error {
+    font-size: 1rem !important;
+  }
+  #login_signup_wrapper .signup--box p {
+    font-size: 1.2rem !important;
   }
 }
 
